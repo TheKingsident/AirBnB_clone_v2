@@ -48,8 +48,7 @@ class BaseModel:
         """Convert instance into dict format"""
         dictionary = self.__dict__.copy # create a copy of instance
         # Add class name to the dictionary
-        dictionary['__class__'] = (str(type
-                                       (self)).split('.')[-1]).split('\'')[0]
+        dictionary['__class__'] = (str(type(self)).split('.')[-1]).split('\'')[0]
         dictionary.update(self.__dict__)
         dictionary.update({'__class__':
                           (str(type(self)).split('.')[-1]).split('\'')[0]})
