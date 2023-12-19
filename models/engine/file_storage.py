@@ -15,7 +15,7 @@ class FileStorage:
             for k, v in FileStorage.__objects.items():
                 if v.to_dict()['__class__'] == cls.__name__:
                     obj_dict.update({k: v})
-                return obj_dict
+            return obj_dict
         else:
             return FileStorage.__objects
 
