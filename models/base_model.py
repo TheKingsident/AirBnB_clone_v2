@@ -6,6 +6,7 @@ import uuid
 from datetime import datetime
 
 
+Base = declarative_base()
 class BaseModel:
     """A base class for all hbnb models"""
     id = Column(String(60), primary_key=True, nullable=False)
