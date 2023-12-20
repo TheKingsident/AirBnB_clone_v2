@@ -5,10 +5,10 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from os import getenv
 from models.base_model import Base
-from models.base_model import Base
 from models.user import User
 from models.state import State
 from models.city import City
+from models.place import Place
 
 
 class DBStorage:
