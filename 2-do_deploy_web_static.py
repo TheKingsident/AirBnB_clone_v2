@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-Generates a .tgz archive from the contents of the web_static folder
-and deploys it to web servers.
-"""
+""" Generates a .tgz archive and deploys it to web servers. """
 from datetime import datetime
 from fabric.api import local, put, run, env
 import os
@@ -13,9 +10,7 @@ env.key_filename = "~/RSA_public_key"
 
 
 def do_pack():
-    """
-    Generates a .tgz archive from the contents of the web_static folder.
-    """
+    """Generates a .tgz archive from the contents of the web_static folder."""
     try:
         if not os.path.exists("versions"):
             local('mkdir -p versions')
@@ -31,9 +26,7 @@ def do_pack():
 
 
 def do_deploy(archive_path):
-    """
-    Distributes an archive to the web servers.
-    """
+    """Distributes an archive to the web servers."""
     if not os.path.exists(archive_path):
         return False
 
