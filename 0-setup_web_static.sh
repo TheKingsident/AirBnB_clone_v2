@@ -40,4 +40,3 @@ echo "$nginx_config" | sudo tee /etc/nginx/sites-available/default
 
 # Restart Nginx to apply the changes
 sudo systemctl restart nginx
-
