@@ -50,7 +50,6 @@ def do_deploy(archive_path):
         current_path = "/data/web_static/current"
         run("ln -s {} {}".format(release_path, current_path))
 
-        print("New version deployed!")
         return True
 
     except Exception:
