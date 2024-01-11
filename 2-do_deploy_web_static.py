@@ -7,9 +7,9 @@ from datetime import datetime
 from fabric.api import local, put, run, env
 import os
 
-# env.hosts = ['54.236.27.95', '54.237.18.67']
-# env.user = "ubuntu"
-# env.key_filename = "~/RSA_public_key"
+env.hosts = ['54.236.27.95', '54.237.18.67']
+env.user = "ubuntu"
+env.key_filename = "~/RSA_public_key"
 
 
 def do_pack():
