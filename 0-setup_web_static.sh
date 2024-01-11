@@ -35,7 +35,7 @@ server {
 }
 "
 
-# Add the configuration to Nginx (Assuming default Nginx configuration file. Adjust if necessary)
+# Add the configuration to Nginx
 echo "$nginx_config" | sudo tee /etc/nginx/sites-available/default
 
 # Restart Nginx to apply the changes
