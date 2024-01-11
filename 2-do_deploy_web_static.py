@@ -43,23 +43,14 @@ def do_deploy(archive_path):
         # Delete the archive from the web server
         run("rm /tmp/{}".format(file_name))
 
-        # Move contents out of the web_static directory
-        run("mv {}/web_static/* {}".format(release_path, release_path))
-
-        # Remove the web_static directory
-        run("rm -rf {}/web_static".format(release_path))
-
         # Delete the symbolic link
         run("rm -rf /data/web_static/current")
 
-        # Create the new symbolic link
+        # Create new the symbolic link
         current_path = "/data/web_static/current"
         run("ln -s {} {}".format(release_path, current_path))
 
-        print("New version deployed!")
-
         return True
 
-    except Exception as e:
-        print(e)
+    except Exception:
         return False
