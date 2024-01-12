@@ -15,7 +15,7 @@ def do_pack():
             local('mkdir -p versions')
         now = datetime.now().strftime('%Y%m%d%H%M%S')
         file_name = 'versions/web_static_' + now + '.tgz'
-        local('tar -czvf ' + file_name + ' -C web_static .')
+        local('tar -czvf ' + file_name + ' web_static .')
         return file_name
     except Exception:
         return None
@@ -30,10 +30,13 @@ def do_deploy(archive_path):
         name = file_name.split('.')[0]
         release_path = "/data/web_static/releases/" + name
         run("mkdir -p " + release_path)
-        run("tar -xzf /tmp/" + file_name + " -C " + release_path)
+        run("tar -xzf /tmp/" + file_name + " -C " + release_path + "/")
         run("rm /tmp/" + file_name)
+        run("mv " + release_path + "/web_static/* " + release_path + "/")
+        run("rm -rf " + release_path + "/web_static")
         run("rm -rf /data/web_static/current")
-        run("ln -s " + release_path + " /data/web_static/current")
+        run("ln -s " + release_path + "/ /data/web_static/current")
+        print("New version deployed!")
         return True
     except Exception:
         return False
