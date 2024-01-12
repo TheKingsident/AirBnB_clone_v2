@@ -8,6 +8,7 @@ env.hosts = ['54.236.27.95', '54.237.18.67']
 env.user = "ubuntu"
 env.key_filename = "~/RSA_public_key"
 
+
 def do_pack():
     """Generates a .tgz archive from the contents of the web_static folder."""
     try:
@@ -19,6 +20,7 @@ def do_pack():
         return file_name
     except Exception:
         return None
+
 
 def do_deploy(archive_path):
     """Distributes an archive to the web servers."""
@@ -40,6 +42,7 @@ def do_deploy(archive_path):
         return True
     except Exception:
         return False
+
 
 def deploy():
     """ Creates and distributes an archive to web servers. """
