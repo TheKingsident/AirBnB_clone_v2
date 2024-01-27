@@ -44,7 +44,8 @@ def disp_numtemp(n):
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
 def disp_odd_even(n):
     """Displays dynamic content"""
-    return render_template('6-number_odd_or_even.html', number=n, is_even=(n % 2 == 0))
+    return render_template('6-number_odd_or_even.html', number=n,
+                           is_even=(n % 2 == 0))
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
