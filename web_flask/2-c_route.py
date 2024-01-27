@@ -18,7 +18,7 @@ def disp_hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def disp_text(text):
-    """Displays content"""
+    """Displays dynamic content"""
     return 'C '+ text.replace('_', ' ')
 
 
