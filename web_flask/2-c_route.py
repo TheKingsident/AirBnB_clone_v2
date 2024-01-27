@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Starts a simple Flask web application"""
 from flask import Flask
-from sys import argv
 app = Flask(__name__)
 
 
