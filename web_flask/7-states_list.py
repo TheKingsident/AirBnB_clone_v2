@@ -17,7 +17,7 @@ def teardownDB(exception):
 def states_list():
     """Displays list of all states in the storage"""
     states = storage.all(State).values()
-    states = sorted(states, key=lambda state:state.name)
+    states = sorted(states, key=lambda state: state.name)
     return render_template('7-states_list.html', states=states)
 
 
