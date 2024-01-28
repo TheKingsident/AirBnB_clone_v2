@@ -18,9 +18,8 @@ def disp_states():
 @app.route('/states/<id>', strict_slashes=False)
 def states_id(id):
     """Route to display states by id"""
-    state = storage.all(State).get('State.'+ id)
+    state = storage.all(State).get('State.' + id)
     return render_template('state.html', state=state)
-
 
 
 @app.teardown_appcontext
