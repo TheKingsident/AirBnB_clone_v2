@@ -1,51 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>AirBnB clone</title>
+<!DOCTYPE HTML>
+<HTML LANG="en">
+	<HEAD>
+		<TITLE>AirBnB clone</TITLE>
 
-		<link rel="shortcut icon" href="images/icon.ico" >
+		<LINK REL="shortcut icon" href="images/icon.ico" >
 
-		<link rel="stylesheet" href="../static/styles/4-common.css"/>
-		<link rel="stylesheet" href="../static/styles/3-header.css"/>
-		<link rel="stylesheet" href="../static/styles/3-footer.css"/>
-		<link rel="stylesheet" href="../static/styles/6-filters.css"/>
-	</head>
-    <body>
-		<header>
-			<div id="header_logo"></div>
-		</header>
-		<div class="container">
-			<section class="filters">
-				<button>Search</button>
-				<div class="locations">
-					<h3>States</h3>
-					<h4>&nbsp;</h4>
-					<ul class="popover">
+		<LINK REL="stylesheet" href="../static/styles/4-common.css"/>
+		<LINK REL="stylesheet" href="../static/styles/3-header.css"/>
+		<LINK REL="stylesheet" href="../static/styles/3-footer.css"/>
+		<LINK REL="stylesheet" href="../static/styles/6-filters.css"/>
+	</HEAD>
+    <BODY>
+		<HEADER>
+			<DIV id="header_logo"></DIV>
+		</HEADER>
+		<DIV CLASS="container">
+			<SECTION CLASS="filters">
+				<BUTTON>Search</BUTTON>
+				<DIV CLASS="locations">
+					<H3>States</H3>
+					<H4>&nbsp;</H4>
+					<UL CLASS="popover">
                         {% for state in states %}
-						<li><h2>{{ state.name }}</h2>
-							<ul>
+						<LI><h2>{{ state.name }}</h2>
+							<UL>
                                 {% for city in state.cities %}
-								<li><h4>{{ city.name }}</h4></li>
+								<LI><H4>{{ city.name }}</H4></LI>
                                 {% endfor %}
-							</ul>
-                        </li>
+							</UL>
+                        </LI>
                         {% endfor %}
-					</ul>
-				</div>
-				<div class="amenities">
-					<h3>Amenities</h3>
-					<h4>&nbsp;</h4>
-					<ul class="popover">
+					</UL>
+				</DIV>
+				<DIV CLASS="amenities">
+					<H3>Amenities</H3>
+					<H4>&nbsp;</H4>
+					<UL CLASS="popover">
                         {% for amenity in amenities %}
-						<li><h4>{{ amenity.name }}</h4></li>
+						<LI><H4>{{ amenity.name }}</H4></LI>
 						{% endfor %}
-					</ul>
-				</div>
+					</UL>
+				</DIV>
 
-			</section>
-		</div>
-		<footer>
-			<p>Holberton School</p>
-		</footer>
-	</body>
-</html>
+			</SECTION>
+		</DIV>
+		<FOOTER>
+			<P>Holberton School</P>
+		</FOOTER>
+	</BODY>
+</HTML>

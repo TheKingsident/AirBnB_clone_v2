@@ -14,6 +14,7 @@
 	height: 100%;
 	width: 25%;
 
+
 	line-height: 20px;
 	border-right: 1px solid #DDDDDD;
 }
@@ -33,6 +34,8 @@
 	display: none;
 	background-color: #FAFAFA;
 	width: 100%;
+	max-height: 300px;
+	overflow: auto;
 
 	margin-left: -1px;
 	margin-top: 8px;
