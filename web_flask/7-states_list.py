@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""starts a Flask web application that dispalys a list of all states in storage"""
+"""starts a Flask web application to dispaly a list of all states in storage"""
 from flask import Flask, render_template
 from models import storage
 from models.state import State
